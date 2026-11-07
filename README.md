@@ -5,6 +5,9 @@ The system operates both as a hardware serial terminal (CLI) and a lightweight w
 
 ![Web interface](IMG_1605.png)
 
+It is all controlled via a CLI running from a terminal!
+![CLI interface in Visual Studio with PlatformIO plugin](AR1010_Tune.png)
+
 ⚠️ Hardware Warning
 
 The original SparkFun AIROHA 1010 breakout board is discontinued. If you use an eBay clone, note that they usually require additional wiring adjustments to function with this specific circuit layout.
