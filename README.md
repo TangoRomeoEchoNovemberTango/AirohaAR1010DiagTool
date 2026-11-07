@@ -16,22 +16,22 @@ The original SparkFun AIROHA 1010 breakout board is discontinued. If you use an 
 
 Features
 
-• AR1010 Control Engine: Handles low-level register configuration over the receiver IC via I2C/SPI to manage tuning frequencies, volume levels, and mute flags.
-• Hardware-Driven CLI: Provides an interactive terminal interface directly over the ESP32 serial connection to debug, calibrate, and verify board states.
-• Interactive Web Interface: Implements a local web server to serve a control dashboard to any connected device on the Wi-Fi network.
-• Dynamic ADC Pin Selection: Includes a dropdown configuration menu in the UI to dynamically switch active ADC paths (such as GPIO 32) for probing individual analog streams.
-• In-Browser WAV Recording: Captures raw audio bytes streamed from the ADC natively within the browser, providing direct .wav file downloads.
-• Low-Latency WebSocket Engine: Features experimental WebSocket infrastructure designed to stream real-time audio bytes straight from the hardware registers (Note: WebSocket streaming is currently untested).
+- AR1010 Control Engine: Handles low-level register configuration over the receiver IC via I2C/SPI to manage tuning frequencies, volume levels, and mute flags.
+- Hardware-Driven CLI: Provides an interactive terminal interface directly over the ESP32 serial connection to debug, calibrate, and verify board states.
+- Interactive Web Interface: Implements a local web server to serve a control dashboard to any connected device on the Wi-Fi network.
+- Dynamic ADC Pin Selection: Includes a dropdown configuration menu in the UI to dynamically switch active ADC paths (such as GPIO 32) for probing individual analog streams.
+- In-Browser WAV Recording: Captures raw audio bytes streamed from the ADC natively within the browser, providing direct .wav file downloads.
+- Low-Latency WebSocket Engine: Features experimental WebSocket infrastructure designed to stream real-time audio bytes straight from the hardware registers (Note: WebSocket streaming is currently untested).
 
 Hardware Requirements
 
-• 2x 2000 ohm resistors (need to make a voltage divider, 10k is recommended but use whatever you have as long as its 2 of the same value)
-• 1x 10uF eletrolytic capacitor
-• broadboard with wire, alligator clips, jumper wires (22 AWG should work okay, save 2 1/2 feet for an antenna)
-• soldering iron, solder, wire cutter/stripper 
-• Microcontroller: ESP32-WROOM (32-bit Dual-Core Tensilica processor)
-• FM Receiver Breakout: SparkFun (2009) Airoha AR1010 FM Radio Board
-• Visual References: Pin markings can be cross-referenced with the layout photos:
+- 2x 2000 ohm resistors (need to make a voltage divider, 10k is recommended but use whatever you have as long as its 2 of the same value)
+- 1x 10uF eletrolytic capacitor
+- broadboard with wire, alligator clips, jumper wires (22 AWG should work okay, save 2 1/2 feet for an antenna)
+- soldering iron, solder, wire cutter/stripper 
+- Microcontroller: ESP32-WROOM (32-bit Dual-Core Tensilica processor)
+- FM Receiver Breakout: SparkFun (2009) Airoha AR1010 FM Radio Board
+- Visual References: Pin markings can be cross-referenced with the layout photos:
   - ![View Breakout Front Image](AirohaAR1010_Front.jpeg)
   - ![View Breakout Back Image](AirohaAR1010_Back.jpeg)
 
@@ -41,13 +41,13 @@ Wiring Configuration
 
 Map the connections between your ESP32-WROOM and the breakout pins as follows:
 
-ESP32-WROOM Pin	SparkFun AR1010 Pin	Description
-GPIO 21 (SDA)	SDA	I2C Data Line
-GPIO 22 (SCL)	SCL	I2C Clock Line
-*GPIO 32 (ADC1_CH4)	LEFT or RIGHT AUDIO_OUT	 (input audio signal from 10uF electrolytic capacitor to voltage divider network midpoint with the positive leg of the capacitor tied to the midpoint and the negative end to the audio source, then wire to whatever ADC pin you choose, im using pin 32) See schematic or goto Cirkut Designer file:
-https://app.cirkitdesigner.com/project/551769e5-b1a1-470c-9fc6-02ed853b1721
-3V3	VCC	3.3V Power Supply
-GND	GND	Common Ground Line
+ESP32-WROOM Pin	SparkFun AR1010 Pin	Description:
+- GPIO 21 (SDA)	SDA	I2C Data Line
+- GPIO 22 (SCL)	SCL	I2C Clock Line
+- *GPIO 32 (ADC1_CH4)	LEFT or RIGHT AUDIO_OUT	 (input audio signal from 10uF electrolytic capacitor to voltage divider network midpoint with the positive leg of the capacitor tied to the midpoint and the negative end to the audio source, then wire to whatever ADC pin you choose, im using pin 32) 
+- See schematic or goto Cirkut Designer file: https://app.cirkitdesigner.com/project/551769e5-b1a1-470c-9fc6-02ed853b1721
+- 3V3	VCC	3.3V Power Supply
+- GND	GND	Common Ground Line
 
 Hardware Note: To ensure safe signal processing within the ESP32 internal ADC tolerances (0V - 3.3V), place a protective DC-blocking coupling capacitor inline with the audio path between the receiver output and GPIO 32.
 
