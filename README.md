@@ -1,7 +1,8 @@
 Ré: An FM Radio Streamer and Recorder 📻
 
-Ré is a custom firmware project that connects an ESP32-WROOM board to a vintage SparkFun (2009) Airoha AR1010 FM Radio Receiver Breakout Board. It allows you to control the hardware, stream audio across your local network, and record live radio directly through your web browser.
-The system operates both as a hardware serial terminal (CLI) and a lightweight web server hosted concurrently over Wi-Fi.
+Ré is a esp32 powered hardware device that connects an ESP32-WROOM board to a vintage SparkFun (2009) Airoha AR1010 FM Radio Receiver Breakout Board. 
+Basically its a little fm radio you can connect to your home wifi and record live radio directly through any web browser and save it as a WAV file to your smartphone or computer!
+
 
 Below you can see me streaming to my iPad where i can record and save live radio recordings directly to my mobile device!
 ![Web interface](IMG_1605.png)
