@@ -4,7 +4,7 @@ WARNING! THE Sparkfun AIROHA 1010 dev board has been discontinued! There are clo
 # Meet Ré! The FM Radio Streamer and Recorder! 📻✨
 
 A diagnostic and interface firmware project written for the **ESP32-WROOM** development board to communicate with and control the legacy **SparkFun (2009) Airoha AR1010 FM Radio Receiver Breakout Board**. It acts as a Command Line Interface (CLI) tool while concurrently serving an interactive web application over Wi-Fi.
-![Web interface](IMG_1605.jpeg)
+![Web interface](IMG_1605.png)
 ![Project Hardware and Schematic](IMG_1602.jpeg)
 
 ## 🚀 Features
